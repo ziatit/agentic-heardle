@@ -22,4 +22,13 @@ def get_user_recent_tracks(limit=5):
         } for song in user_tracks
     ]
 
+    seen = set()
+    unique = []
+    for t in tracks:
+        key = (t.get('name'), t.get('artist'), t.get('album'))
+        if key not in seen:
+            seen.add(key)
+            unique.append(t)
+    tracks = unique
+
     return tracks
