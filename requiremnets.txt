@@ -1,0 +1,4 @@
+langgraph
+pylast
+python-dotenv
+langchain-deepseek
